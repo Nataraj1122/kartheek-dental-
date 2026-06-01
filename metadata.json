@@ -1,0 +1,8 @@
+{
+  "name": "Kartheek's Dental Hospital",
+  "description": "Premium dental hospital website for Kartheek's Dental & Maxillofacial Centre in Kadapa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

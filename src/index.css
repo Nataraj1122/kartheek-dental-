@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0a192f;
+  --color-primary-light: #112240;
+  --color-secondary: #00b4d8;
+  --color-secondary-light: #90e0ef;
+  --color-accent: #0077b6;
+  
+  --color-surface: #ffffff;
+  --color-surface-dim: #f8fafc;
+  
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-2xl border border-white/40 shadow-[0_8px_32px_rgba(0,0,0,0.04)];
+  }
+  .glass-panel-dark {
+    @apply bg-[#0a192f]/60 backdrop-blur-2xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.15)];
+  }
+}
+
+body {
+  @apply bg-[#f8fafc] text-[#334155] font-sans antialiased selection:bg-secondary/30 selection:text-primary overflow-x-hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply tracking-tight text-primary;
+}
+
+/* Custom hide scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
