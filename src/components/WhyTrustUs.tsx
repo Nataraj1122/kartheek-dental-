@@ -142,20 +142,19 @@ export default function WhyTrustUs() {
   }, []);
 
   return (
-    <section className="py-12 md:py-20 bg-blue-50/50">
+    <section className="pt-12 md:pt-20 pb-4 md:pb-8 bg-blue-50/50">
       <div className="max-w-7xl mx-auto px-4 md:px-12">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 md:mb-12 gap-4">
-          <div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium text-primary tracking-tight mb-3">Why Choose Us?</h2>
-            <h3 className="text-sm md:text-lg text-teal-700 font-medium tracking-wide">
-              Advanced Technology, Trusted Care & Exceptional Patient Experience
-            </h3>
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-14 gap-6">
+          <div className="max-w-2xl">
+            <h2 className="text-[10px] sm:text-xs uppercase tracking-[0.3em] font-semibold text-secondary mb-2 md:mb-3" style={{ fontFamily: "Poppins, sans-serif" }}>Why Choose Us</h2>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-medium text-primary tracking-tight mb-3 md:mb-4" style={{ fontFamily: "Poppins, sans-serif" }}>Exceptional Care, Advanced Technology</h3>
+            <h4 className="text-sm md:text-base text-gray-500 font-light leading-relaxed">Trusted Dental Excellence for Every Smile</h4>
           </div>
-          <div className="hidden md:flex gap-2">
-            <button onClick={scrollLeft} className="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/5 transition-colors" aria-label="Scroll left">
+          <div className="hidden md:flex gap-3">
+            <button onClick={scrollLeft} className="w-11 h-11 rounded-full border border-gray-200 flex items-center justify-center text-primary hover:bg-white hover:border-gray-300 hover:shadow-sm transition-all shadow-sm bg-white/50" aria-label="Scroll left">
               <ChevronLeft size={20} />
             </button>
-            <button onClick={scrollRight} className="w-10 h-10 rounded-full border border-primary/20 flex items-center justify-center text-primary hover:bg-primary/5 transition-colors" aria-label="Scroll right">
+            <button onClick={scrollRight} className="w-11 h-11 rounded-full border border-gray-200 flex items-center justify-center text-primary hover:bg-white hover:border-gray-300 hover:shadow-sm transition-all shadow-sm bg-white/50" aria-label="Scroll right">
               <ChevronRight size={20} />
             </button>
           </div>
@@ -169,7 +168,7 @@ export default function WhyTrustUs() {
             style={{ msOverflowStyle: 'none', scrollbarWidth: 'none' }}
           >
             {/* Spacer for proper centering of first item */}
-            <div className="shrink-0 pointer-events-none w-[calc(50vw-106px)] sm:w-[calc(50vw-126px)] md:w-[calc(50vw-154px)] lg:w-[calc(50vw-164px)]" />
+            <div className="shrink-0 pointer-events-none w-[calc(50vw-126px)] sm:w-[calc(50vw-156px)] md:w-[calc(50vw-184px)] lg:w-[calc(50vw-194px)]" />
 
             {features.map((item, idx) => {
               const isActive = activeIndex === idx;
@@ -178,7 +177,7 @@ export default function WhyTrustUs() {
                 <div 
                   key={item.id}
                   data-feature-card="true"
-                  className={`snap-center shrink-0 w-[180px] sm:w-[220px] md:w-[260px] lg:w-[280px] transition-all duration-500 ease-out 
+                  className={`snap-center shrink-0 w-[220px] sm:w-[280px] md:w-[320px] lg:w-[340px] transition-all duration-500 ease-out 
                     ${isActive ? 'scale-105 sm:scale-110 opacity-100 blur-none z-10' : 'scale-90 sm:scale-95 opacity-50 blur-[1.5px] z-0 hover:opacity-80 hover:blur-[0.5px]'}`}
                 >
                   <div
@@ -189,22 +188,22 @@ export default function WhyTrustUs() {
                            setActiveModal(item);
                         }
                     }}
-                    className={`bg-white rounded-2xl shadow-sm border border-blue-100 p-4 md:p-5 flex flex-col h-[280px] sm:h-[340px] md:h-[380px] cursor-pointer group shadow-[0_8px_30px_rgb(0,0,0,0.06)] relative ${isActive ? 'ring-1 ring-blue-500/20 ring-offset-2 ring-offset-white shadow-[0_12px_40px_rgb(0,0,0,0.12)]' : ''}`}
+                    className={`bg-white rounded-2xl shadow-sm border border-blue-100 p-4 md:p-6 flex flex-col h-[320px] sm:h-[400px] md:h-[460px] cursor-pointer group shadow-[0_8px_30px_rgb(0,0,0,0.06)] relative ${isActive ? 'ring-1 ring-blue-500/20 ring-offset-2 ring-offset-white shadow-[0_12px_40px_rgb(0,0,0,0.12)]' : ''}`}
                   >
-                    <div className="w-full h-24 sm:h-32 md:h-40 rounded-xl overflow-hidden mb-3 md:mb-4 shrink-0 relative">
+                    <div className="w-full h-32 sm:h-40 md:h-48 rounded-xl overflow-hidden mb-4 md:mb-5 shrink-0 relative">
                        <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                     </div>
-                    <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-3 text-teal-600">
-                      <div className="bg-teal-50 p-1.5 md:p-2.5 rounded-lg shrink-0">
+                    <div className="flex items-center gap-2.5 md:gap-3.5 mb-3 md:mb-4 text-teal-600">
+                      <div className="bg-teal-50 p-2 md:p-3 rounded-lg shrink-0">
                         {item.icon}
                       </div>
-                      <h4 className={`font-semibold text-gray-900 transition-all duration-300 ${isActive ? 'text-sm md:text-xl' : 'text-xs md:text-base'}`}>{item.title}</h4>
+                      <h4 className={`font-semibold text-gray-900 transition-all duration-300 ${isActive ? 'text-base md:text-xl' : 'text-sm md:text-lg'}`} style={{ fontFamily: "Poppins, sans-serif" }}>{item.title}</h4>
                     </div>
-                    <div className={`overflow-hidden transition-all duration-300 flex-grow ${isActive ? 'max-h-24 opacity-100' : 'max-h-0 opacity-0 mb-0'}`}>
-                        <p className="text-[10px] md:text-sm text-gray-600 line-clamp-3">{item.shortDesc}</p>
+                    <div className={`overflow-hidden transition-all duration-300 flex-grow ${isActive ? 'max-h-24 md:max-h-32 opacity-100' : 'max-h-0 opacity-0 mb-0'}`}>
+                        <p className="text-xs md:text-sm text-gray-600 line-clamp-3 md:line-clamp-4 leading-relaxed">{item.shortDesc}</p>
                     </div>
-                    <button className={`text-primary font-medium text-[10px] md:text-sm flex items-center gap-1.5 group-hover:text-teal-600 transition-colors mt-auto ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none absolute bottom-4'}`}>
-                      Learn More <ArrowRight className="w-3 h-3 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform" />
+                    <button className={`text-primary font-medium text-xs md:text-sm flex items-center gap-1.5 md:gap-2 group-hover:text-teal-600 transition-colors mt-auto ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none absolute bottom-4 md:bottom-5'}`}>
+                      Learn More <ArrowRight className="w-3.5 h-3.5 md:w-4 md:h-4 group-hover:translate-x-1 transition-transform" />
                     </button>
                   </div>
                 </div>
@@ -212,7 +211,7 @@ export default function WhyTrustUs() {
             })}
 
             {/* Spacer for proper centering of last item */}
-            <div className="shrink-0 pointer-events-none w-[calc(50vw-106px)] sm:w-[calc(50vw-126px)] md:w-[calc(50vw-154px)] lg:w-[calc(50vw-164px)]" />
+            <div className="shrink-0 pointer-events-none w-[calc(50vw-126px)] sm:w-[calc(50vw-156px)] md:w-[calc(50vw-184px)] lg:w-[calc(50vw-194px)]" />
           </div>
         </div>
       </div>

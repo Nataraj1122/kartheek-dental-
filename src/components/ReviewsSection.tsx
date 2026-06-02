@@ -149,7 +149,7 @@ export default function ReviewsSection() {
                  >
                     <div className="flex justify-between items-start mb-4">
                       <div className="flex gap-3 items-center">
-                        <img src={rev.image} alt={rev.name} className="w-10 h-10 md:w-12 md:h-12 rounded-full object-cover shrink-0" />
+                        <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-lg shrink-0 border border-blue-100">{rev.name.charAt(0)}</div>
                         <div>
                           <div className="font-semibold text-gray-900 text-sm md:text-base leading-tight" style={{ fontFamily: "Poppins, sans-serif" }}>{rev.name}</div>
                           <div className="text-[10px] md:text-xs text-gray-500 mt-0.5">{rev.date}</div>

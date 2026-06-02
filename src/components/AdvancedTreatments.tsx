@@ -297,38 +297,38 @@ export default function AdvancedTreatments() {
                 <X size={20} />
               </button>
               
-              <div className="w-full h-48 sm:h-64 shrink-0 relative">
+              <div className="w-full h-32 md:h-48 shrink-0 relative">
                  <img src={activeModal.image} alt={activeModal.title} className="w-full h-full object-cover" />
                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent"></div>
-                 <div className="absolute bottom-6 left-6 md:left-10">
-                   <h3 className="text-3xl md:text-4xl font-semibold text-white mb-2" style={{ fontFamily: "Poppins, sans-serif" }}>{activeModal.title}</h3>
+                 <div className="absolute bottom-4 left-5 md:left-8">
+                   <h3 className="text-xl md:text-2xl font-semibold text-white mb-1" style={{ fontFamily: "Poppins, sans-serif" }}>{activeModal.title}</h3>
                  </div>
               </div>
 
-              <div className="p-6 md:p-10 overflow-y-auto bg-slate-50">
-                <div className="grid md:grid-cols-[2fr_1fr] gap-8 md:gap-12">
+              <div className="p-5 md:p-8 overflow-y-auto bg-slate-50">
+                <div className="grid md:grid-cols-3 gap-6 md:gap-8">
                   
-                  <div className="space-y-8">
+                  <div className="md:col-span-2 space-y-6">
                     <div>
-                      <h4 className="text-lg md:text-xl font-semibold text-slate-900 mb-3" style={{ fontFamily: "Poppins, sans-serif" }}>Overview</h4>
-                      <p className="text-slate-600 text-sm md:text-base leading-relaxed">
+                      <h4 className="text-base md:text-lg font-semibold text-slate-900 mb-2" style={{ fontFamily: "Poppins, sans-serif" }}>Overview</h4>
+                      <p className="text-slate-600 text-xs md:text-sm leading-relaxed">
                         {activeModal.description}
                       </p>
                     </div>
 
                     <div>
-                      <h4 className="text-lg md:text-xl font-semibold text-slate-900 mb-4" style={{ fontFamily: "Poppins, sans-serif" }}>Treatment Procedure</h4>
-                      <p className="text-slate-600 text-sm md:text-base leading-relaxed p-4 bg-white rounded-xl border border-slate-100 shadow-sm">
+                      <h4 className="text-base md:text-lg font-semibold text-slate-900 mb-2" style={{ fontFamily: "Poppins, sans-serif" }}>Treatment Procedure</h4>
+                      <p className="text-slate-600 text-xs md:text-sm leading-relaxed p-3 md:p-4 bg-white rounded-lg border border-slate-100 shadow-sm">
                         {activeModal.procedure}
                       </p>
                     </div>
                     
                     <div className="md:hidden">
-                      <h4 className="text-lg font-semibold text-slate-900 mb-3" style={{ fontFamily: "Poppins, sans-serif" }}>Key Benefits</h4>
-                      <ul className="space-y-3">
+                      <h4 className="text-base font-semibold text-slate-900 mb-2" style={{ fontFamily: "Poppins, sans-serif" }}>Key Benefits</h4>
+                      <ul className="space-y-2">
                         {activeModal.benefits.map((benefit, i) => (
-                          <li key={i} className="flex items-start gap-2.5 text-sm text-slate-700">
-                            <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0" strokeWidth={1.5} />
+                          <li key={i} className="flex items-start gap-2 text-xs md:text-sm text-slate-700">
+                            <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0" strokeWidth={1.5} />
                             <span className="pt-0.5">{benefit}</span>
                           </li>
                         ))}
@@ -336,44 +336,44 @@ export default function AdvancedTreatments() {
                     </div>
 
                     <div>
-                      <h4 className="text-lg md:text-xl font-semibold text-slate-900 mb-4" style={{ fontFamily: "Poppins, sans-serif" }}>Patient FAQs</h4>
-                      <div className="space-y-3">
+                      <h4 className="text-base md:text-lg font-semibold text-slate-900 mb-2" style={{ fontFamily: "Poppins, sans-serif" }}>Patient FAQs</h4>
+                      <div className="space-y-2">
                         {activeModal.faq.map((f, i) => (
-                          <div key={i} className="bg-white p-4 rounded-xl border border-slate-100 shadow-sm">
-                            <h5 className="font-medium text-slate-900 text-sm mb-1.5">{f.q}</h5>
-                            <p className="text-sm text-slate-600 leading-relaxed">{f.a}</p>
+                          <div key={i} className="bg-white p-3 rounded-lg border border-slate-100 shadow-sm">
+                            <h5 className="font-medium text-slate-900 text-xs md:text-sm mb-1">{f.q}</h5>
+                            <p className="text-xs text-slate-600 leading-relaxed">{f.a}</p>
                           </div>
                         ))}
                       </div>
                     </div>
                   </div>
 
-                  <div className="space-y-6">
-                    <div className="hidden md:block bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
-                      <h4 className="text-lg font-semibold text-slate-900 mb-4" style={{ fontFamily: "Poppins, sans-serif" }}>Key Benefits</h4>
-                      <ul className="space-y-4">
+                  <div className="md:col-span-1 space-y-5">
+                    <div className="hidden md:block bg-white p-5 rounded-xl border border-slate-100 shadow-sm">
+                      <h4 className="text-base font-semibold text-slate-900 mb-3" style={{ fontFamily: "Poppins, sans-serif" }}>Key Benefits</h4>
+                      <ul className="space-y-3">
                         {activeModal.benefits.map((benefit, i) => (
-                          <li key={i} className="flex items-start gap-2.5 text-sm text-slate-700">
-                            <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0" strokeWidth={1.5} />
+                          <li key={i} className="flex items-start gap-2 text-sm text-slate-700">
+                            <CheckCircle2 className="w-4 h-4 text-blue-600 shrink-0" strokeWidth={1.5} />
                             <span className="pt-0.5">{benefit}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
 
-                    <div className="bg-blue-600 rounded-2xl p-6 text-white shadow-lg sticky top-6">
-                      <h4 className="text-xl font-semibold mb-2" style={{ fontFamily: "Poppins, sans-serif" }}>Need this treatment?</h4>
-                      <p className="text-blue-100 text-sm mb-6">Schedule a consultation with our experts today to get started.</p>
+                    <div className="bg-blue-600 rounded-xl p-5 text-white shadow-md sticky top-5">
+                      <h4 className="text-base font-semibold mb-1" style={{ fontFamily: "Poppins, sans-serif" }}>Book Consultation</h4>
+                      <p className="text-blue-100 text-xs mb-4">Take the first step towards a healthier smile.</p>
                       
-                      <div className="space-y-3">
-                        <a href="#booking" onClick={() => setActiveModal(null)} className="w-full flex items-center justify-center gap-2 bg-white text-blue-600 py-3 rounded-xl font-medium hover:bg-blue-50 transition-colors">
-                          <CalendarCheck className="w-4 h-4" /> Book Appointment
+                      <div className="space-y-2">
+                        <a href="#booking" onClick={() => setActiveModal(null)} className="w-full flex items-center justify-center gap-2 bg-white text-blue-600 py-2.5 rounded-lg text-xs font-medium hover:bg-blue-50 transition-colors">
+                          <CalendarCheck className="w-3.5 h-3.5" /> Book Appt
                         </a>
-                        <a href="tel:+919052311281" className="w-full flex items-center justify-center gap-2 bg-blue-700 text-white py-3 rounded-xl font-medium hover:bg-blue-800 transition-colors">
-                          <Phone className="w-4 h-4" /> Call Now
+                        <a href="tel:+919052311281" className="w-full flex items-center justify-center gap-2 bg-blue-700 text-white py-2.5 rounded-lg text-xs font-medium hover:bg-blue-800 transition-colors">
+                          <Phone className="w-3.5 h-3.5" /> Call Now
                         </a>
-                        <a href="https://wa.me/919052311281" target="_blank" rel="noreferrer" className="w-full flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 rounded-xl font-medium hover:bg-[#20bd5a] transition-colors mt-2">
-                          <MessageSquare className="w-4 h-4" /> WhatsApp Us
+                        <a href="https://wa.me/919052311281" target="_blank" rel="noreferrer" className="w-full flex items-center justify-center gap-2 bg-[#25D366] text-white py-2.5 rounded-lg text-xs font-medium hover:bg-[#20bd5a] transition-colors mt-1">
+                          <MessageSquare className="w-3.5 h-3.5" /> WhatsApp
                         </a>
                       </div>
                     </div>

@@ -20,13 +20,16 @@ export default function Navigation() {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out ${scrolled ? 'glass-panel py-3' : 'bg-transparent py-4 md:py-5'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between">
           
-          <Link to="/" className="flex flex-col relative z-[60]">
-            <span className={`text-lg md:text-xl font-semibold tracking-tight transition-colors duration-300 ${scrolled || isOpen ? 'text-primary' : 'text-white'}`}>
-              Kartheek's
-            </span>
-            <span className={`text-[10px] md:text-xs uppercase tracking-[0.2em] font-medium transition-colors duration-300 ${scrolled || isOpen ? 'text-secondary' : 'text-white/80'}`}>
-              Dental & Maxillofacial
-            </span>
+          <Link to="/" className="flex items-center gap-3 relative z-[60]">
+            <img src="/logo.jpg" alt="Kartheek's Dental & Maxillofacial" className="h-10 md:h-12 w-auto object-contain bg-white rounded-md p-1 shadow-sm" />
+            <div className="flex flex-col">
+              <span className={`text-lg md:text-xl font-semibold tracking-tight transition-colors duration-300 ${scrolled || isOpen ? 'text-primary' : 'text-white'}`}>
+                Kartheek's
+              </span>
+              <span className={`text-[10px] md:text-xs uppercase tracking-[0.2em] font-medium transition-colors duration-300 ${scrolled || isOpen ? 'text-secondary' : 'text-white/80'}`}>
+                Dental & Maxillofacial
+              </span>
+            </div>
           </Link>
           
           <div className="hidden lg:flex items-center gap-10">
@@ -60,33 +63,47 @@ export default function Navigation() {
       <AnimatePresence>
         {isOpen && (
           <motion.div 
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 min-h-[100dvh] w-full bg-white/95 backdrop-blur-xl z-50 flex flex-col items-center justify-center gap-8"
+            className="fixed inset-0 min-h-[100dvh] w-full bg-white z-[45] flex flex-col px-6 pt-24 pb-8 shadow-2xl"
           >
-            {['Services', 'Implants', 'Doctors', 'Gallery', 'Contact'].map((item, i) => (
-              <motion.a 
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.05 + 0.1 }}
-                key={item} 
-                href={`/#${item.toLowerCase()}`} 
-                onClick={() => setIsOpen(false)} 
-                className="text-3xl font-medium tracking-tight text-primary hover:text-secondary transition-colors"
+            <div className="flex flex-col gap-1 mt-4">
+              <h4 className="text-[10px] uppercase tracking-widest font-semibold text-gray-400 mb-3" style={{ fontFamily: "Poppins, sans-serif" }}>Menu</h4>
+              {['Services', 'Implants', 'Doctors', 'Gallery', 'Contact'].map((item, i) => (
+                <motion.a 
+                  initial={{ opacity: 0, x: -15 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.05 + 0.1 }}
+                  key={item} 
+                  href={`/#${item.toLowerCase()}`} 
+                  onClick={() => setIsOpen(false)} 
+                  className="text-lg font-medium tracking-tight text-primary hover:text-[#22D3EE] transition-colors py-3.5 border-b border-gray-100 flex items-center justify-between group last:border-0"
+                 >
+                  <span style={{ fontFamily: "Poppins, sans-serif" }}>{item}</span>
+                  <span className="text-gray-300 group-hover:text-[#22D3EE] transition-colors text-sm">→</span>
+                </motion.a>
+               ))}
+            </div>
+            
+            <div className="mt-auto flex flex-col gap-6">
+               <motion.div 
+                 initial={{ opacity: 0, y: 15 }}
+                 animate={{ opacity: 1, y: 0 }}
+                 transition={{ delay: 0.35 }}
+                 className="flex flex-col gap-3 p-5 bg-surface-container-lowest border border-gray-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)] rounded-2xl"
                >
-                {item}
-              </motion.a>
-             ))}
-             <motion.button 
-               initial={{ opacity: 0, y: 20 }}
-               animate={{ opacity: 1, y: 0 }}
-               transition={{ delay: 0.4 }}
-               className="bg-primary text-white font-semibold py-4 w-64 rounded-full mt-8 text-lg"
-             >
-               Book Appointment
-             </motion.button>
+                 <span className="text-[10px] uppercase tracking-widest text-secondary font-semibold" style={{ fontFamily: "Poppins, sans-serif" }}>Book an Appointment</span>
+                 <a href="tel:+919052311281" className="text-base font-medium text-primary flex items-center gap-2">
+                    <Phone size={16} className="text-secondary" />
+                    +91 90523 11281
+                 </a>
+                 <button className="mt-1 bg-primary text-white font-medium py-3 w-full rounded-xl text-sm transition-transform active:scale-95 shadow-sm shadow-primary/20">
+                   Contact Us Today
+                 </button>
+               </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

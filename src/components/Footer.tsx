@@ -8,9 +8,12 @@ export default function Footer() {
         
         {/* Section 1: Logo & Description */}
         <div className="lg:col-span-4 space-y-3">
-          <Link to="/" className="flex flex-col">
-            <span className="text-xl md:text-2xl font-semibold tracking-tight text-white line-clamp-1" style={{ fontFamily: "Poppins, sans-serif" }}>Kartheek's</span>
-            <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-medium text-[#22D3EE] line-clamp-1">Dental & Maxillofacial</span>
+          <Link to="/" className="flex items-center gap-3">
+            <img src="/logo.jpg" alt="Kartheek's Dental & Maxillofacial" className="h-10 w-auto object-contain bg-white rounded-md p-1" />
+            <div className="flex flex-col">
+              <span className="text-xl md:text-2xl font-semibold tracking-tight text-white line-clamp-1" style={{ fontFamily: "Poppins, sans-serif" }}>Kartheek's</span>
+              <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-medium text-[#22D3EE] line-clamp-1">Dental & Maxillofacial</span>
+            </div>
           </Link>
           <p className="text-xs md:text-sm text-gray-300 font-light leading-relaxed max-w-sm">
             Kartheek's Dental & Maxillofacial provides advanced, safe and patient-focused dental care in Kadapa.

@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react";
 const mediaItems = [
   { type: 'image', src: "/a3fef4f389be3e97771b067e8ed10413.jpg" },
   { type: 'image', src: "/11d1146c3b223ced0a57e2dae5f1c13d.jpg" },
-  { type: 'video', src: "/video.mp4" }
+  { type: 'image', src: "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=2000&auto=format&fit=crop" }
 ];
 
 export default function Hero() {
@@ -86,19 +86,21 @@ export default function Hero() {
          </button>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 w-full text-center mt-8 md:mt-16">
-        <motion.div
-           initial={{ opacity: 0, y: 30 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-           className="max-w-5xl mx-auto"
-        >
-          <div className="absolute bottom-4 md:bottom-8 left-0 right-0 flex justify-center z-10">
-            <span className="text-white/80 uppercase tracking-[0.2em] font-medium text-[10px] md:text-xs bg-black/30 backdrop-blur-sm px-4 py-1.5 rounded-full border border-white/20">
-              Smilee
-            </span>
-          </div>
-        </motion.div>
+      <div className="relative z-10 w-full h-full pointer-events-none">
+        {/* Desktop Side text */}
+        <div className="absolute bottom-12 right-12 z-10 hidden md:flex items-center gap-4 origin-bottom-right -rotate-90">
+          <div className="w-12 h-[1px] bg-[#22D3EE]/50"></div>
+          <span className="text-[#22D3EE] uppercase tracking-[0.3em] font-semibold text-xs drop-shadow-md" style={{ fontFamily: "Poppins, sans-serif" }}>
+            Kartheek's Dental & Maxillofacial
+          </span>
+        </div>
+        
+        {/* Mobile Bottom text */}
+        <div className="absolute bottom-16 left-0 right-0 flex justify-center z-10 md:hidden pb-4">
+          <span className="text-[#22D3EE] uppercase tracking-[0.2em] font-semibold text-[10px] drop-shadow-md bg-black/40 px-4 py-2 rounded-full border border-[#22D3EE]/20" style={{ fontFamily: "Poppins, sans-serif" }}>
+            Kartheek's Dental & Maxillofacial
+          </span>
+        </div>
       </div>
 
       {/* Slider Dots */}

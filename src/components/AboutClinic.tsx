@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 export default function AboutClinic() {
   return (
-    <section id="about" className="py-12 md:py-20 bg-surface">
+    <section id="about" className="py-12 md:py-20 lg:pt-8 bg-surface">
       <div className="max-w-7xl mx-auto px-4 md:px-12">
         <div className="grid lg:grid-cols-2 gap-10 md:gap-20 items-center">
           

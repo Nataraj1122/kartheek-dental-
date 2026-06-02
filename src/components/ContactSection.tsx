@@ -73,7 +73,7 @@ export default function ContactSection() {
             {/* Micro Map */}
             <div className="h-48 md:h-64 bg-gray-100 rounded-2xl overflow-hidden shadow-inner border border-gray-200">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d15582!2d78.826!3d14.467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDI4JzAxLjIiTiA3OMKwNDknMzMuNiJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" 
+                src="https://maps.google.com/maps?q=Balakrishna+Complex,+4/30,+Opposite+Women's+College,+Maria+Puram,+Nagarajupeta,+Kadapa,+Annamayya,+Andhra+Pradesh+516001&t=h&z=16&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
