@@ -1,11 +1,38 @@
 import { Link } from 'react-router-dom';
 import { Menu, Phone, X } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import AdminLoginModal from './AdminLoginModal';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [showAdminLogin, setShowAdminLogin] = useState(false);
+  
+  const clickCount = useRef(0);
+  const clickTimeout = useRef<NodeJS.Timeout | null>(null);
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    // Increment click count
+    clickCount.current += 1;
+    
+    // Clear previous timeout
+    if (clickTimeout.current) {
+      clearTimeout(clickTimeout.current);
+    }
+    
+    // Trigger modal if clicked 5 times
+    if (clickCount.current >= 5) {
+      e.preventDefault(); // Prevent navigation
+      setShowAdminLogin(true);
+      clickCount.current = 0;
+    } else {
+      // Reset counter after short delay (500ms)
+      clickTimeout.current = setTimeout(() => {
+        clickCount.current = 0;
+      }, 500);
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,7 +47,7 @@ export default function Navigation() {
       <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out ${scrolled ? 'glass-panel py-3' : 'bg-transparent py-4 md:py-5'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex items-center justify-between">
           
-          <Link to="/" className="flex items-center gap-3 relative z-[60]">
+          <Link to="/" onClick={handleLogoClick} className="flex items-center gap-3 relative z-[60]">
             <img src="/logo.jpg" alt="Kartheek's Dental & Maxillofacial" className="h-10 md:h-12 w-auto object-contain bg-white rounded-md p-1 shadow-sm" />
             <div className="flex flex-col">
               <span className={`text-lg md:text-xl font-semibold tracking-tight transition-colors duration-300 ${scrolled || isOpen ? 'text-primary' : 'text-white'}`}>
@@ -107,6 +134,11 @@ export default function Navigation() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      <AdminLoginModal 
+        isOpen={showAdminLogin} 
+        onClose={() => setShowAdminLogin(false)} 
+      />
     </>
   );
 }
