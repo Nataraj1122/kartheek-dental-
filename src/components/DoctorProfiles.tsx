@@ -13,7 +13,7 @@ export default function DoctorProfiles() {
           {/* Dr. Kartheek */}
           <div className="bg-surface-container-low rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 group">
             <div className="h-80 bg-surface-container-high overflow-hidden">
-               <img src="/Screenshot 2026-06-16 142755.png" alt="Dr. Kartheek" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+               <img src="/Screenshot%202026-06-16%20142755-1.png" alt="Dr. Kartheek" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="p-8">
               <h3 className="text-3xl font-bold text-primary mb-2">Dr. Kartheek</h3>
@@ -35,7 +35,7 @@ export default function DoctorProfiles() {
           {/* Dr. Sravya */}
           <div className="bg-surface-container-low rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 group">
             <div className="h-80 bg-surface-container-high overflow-hidden">
-               <img src="/Screenshot 2026-06-16 142755.png" alt="Dr. Sravya" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+               <img src="/Screenshot%202026-06-16%20142755-1.png" alt="Dr. Sravya" className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" />
             </div>
             <div className="p-8">
               <h3 className="text-3xl font-bold text-primary mb-2">Dr. Sravya</h3>

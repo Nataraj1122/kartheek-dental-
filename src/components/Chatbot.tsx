@@ -166,7 +166,7 @@ export default function Chatbot() {
               <div className="flex items-center gap-3">
                 <div className="relative">
                   <div className="w-10 h-10 rounded-full overflow-hidden bg-white/20 p-0.5">
-                    <img src="/Screenshot 2026-06-16 142755.png" alt="Dr Profil" className="w-full h-full rounded-full object-cover" />
+                    <img src="/Screenshot%202026-06-16%20142755-1.png" alt="Dr Profil" className="w-full h-full rounded-full object-cover" />
                   </div>
                   <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-primary"></div>
                 </div>
@@ -251,7 +251,7 @@ export default function Chatbot() {
             >
               <div className="absolute inset-0 bg-primary rounded-full animate-pulse opacity-20"></div>
               <div className="absolute inset-0 bg-primary rounded-full overflow-hidden border-2 border-white">
-                <img src="/Screenshot 2026-06-16 142755.png" alt="Dr Profil" className="w-full h-full rounded-full object-cover" />
+                <img src="/Screenshot%202026-06-16%20142755-1.png" alt="Dr Profil" className="w-full h-full rounded-full object-cover" />
               </div>
               <div className="absolute -top-1 -right-1 bg-green-500 w-4 h-4 rounded-full border-2 border-white shadow-sm z-10 animate-pulse"></div>
               

@@ -24,7 +24,7 @@ export default function AboutDoctor() {
               <div className="shrink-0">
                 <div className="w-[100px] h-[100px] sm:w-[120px] sm:h-[120px] md:w-[180px] md:h-[180px] lg:w-[220px] lg:h-[220px] rounded-full sm:rounded-2xl overflow-hidden border border-gray-200 shadow-sm relative">
                    <img 
-                      src="/Screenshot 2026-06-16 142755.png" 
+                      src="/Screenshot%202026-06-16%20142755-1.png" 
                       alt="Dr. Kartheek" 
                       className="w-full h-full object-cover object-top"
                    />
