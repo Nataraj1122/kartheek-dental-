@@ -3,8 +3,8 @@ import { ChevronRight, ChevronLeft } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 
 const cases = [
-  { type: 'Smile Makeover', pre: 'Before', post: 'After', image: 'https://images.unsplash.com/photo-1598256989467-34c81a293f9c?q=80&w=2070&auto=format&fit=crop' },
-  { type: 'Full Mouth Implants', pre: 'Before', post: 'After', image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2068&auto=format&fit=crop' },
+  { type: 'Smile Makeover', pre: 'Before', post: 'After', image: '/887d3589-8791-454a-8775-7513e4f87883.png' },
+  { type: 'Full Mouth Implants', pre: 'Before', post: 'After', image: '/949abfb7-fa3b-40e1-a5a9-4aec1922dbfd.png' },
 ];
 
 export default function SmileGallery() {

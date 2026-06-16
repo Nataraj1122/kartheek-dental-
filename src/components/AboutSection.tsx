@@ -24,7 +24,7 @@ export default function AboutSection() {
           
           <div className="relative">
              <div className="aspect-square md:aspect-auto md:h-[500px] rounded-3xl overflow-hidden shadow-xl">
-                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2068&auto=format&fit=crop" className="w-full h-full object-cover" alt="Clinic Interior" />
+                <img src="/baaea448db9ac25b1c5b4aaa24c57c48.jpg" className="w-full h-full object-cover" alt="Clinic Interior" />
              </div>
              <div className="absolute -bottom-8 -left-8 bg-white p-8 rounded-2xl shadow-2xl max-w-xs hidden md:block border border-outline-variant/20">
                 <p className="text-4xl font-bold text-secondary mb-2">10+</p>

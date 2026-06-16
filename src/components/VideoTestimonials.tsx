@@ -4,25 +4,28 @@ import { useState, useRef, useEffect } from 'react';
 
 const successStories = [
   { 
-    name: 'John D.', 
-    treatment: 'Full Mouth Implants',
-    result: 'Restored chewing function and confidence.',
-    imageBefore: 'https://images.unsplash.com/photo-1598256989467-34c81a293f9c?w=400&h=300&fit=crop', // Provide an actual before/after representation in a real scenario
-    imageAfter: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=400&h=300&fit=crop'
+    name: 'Clinical Case #1024', 
+    treatment: 'Full Mouth Restoration',
+    result: 'Complete functional and aesthetic rehabilitation with precision-guided implants.',
+    imageBefore: '/ad36670a0e5cd2dbc182f42184bd5185.jpg',
+    imageAfter: '/ad36670a0e5cd2dbc182f42184bd5185.jpg',
+    isComposite: true
   },
   { 
-    name: 'Sarah M.', 
-    treatment: 'Smile Makeover',
-    result: 'Achieved a perfect Hollywood smile with veneers.',
-    imageBefore: 'https://images.unsplash.com/photo-1573496800808-16cbaf37f2ee?w=400&h=300&fit=crop',
-    imageAfter: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=400&h=300&fit=crop'
+    name: 'Clinical Case #0892', 
+    treatment: 'Smile Designing',
+    result: 'Achieved optimal facial symmetry and shade correction using ultra-thin porcelain veneers.',
+    imageBefore: '/142ec4eb93cfb7fe908d5eb8c3adf647.jpg',
+    imageAfter: '/142ec4eb93cfb7fe908d5eb8c3adf647.jpg',
+    isComposite: true
   },
   { 
-    name: 'David R.', 
-    treatment: 'Orthodontic Braces',
-    result: 'Perfectly aligned teeth in 18 months.',
-    imageBefore: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=400&h=300&fit=crop',
-    imageAfter: 'https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=400&h=300&fit=crop'
+    name: 'Clinical Case #1204', 
+    treatment: 'Cosmetic Veneers',
+    result: 'Total aesthetic transformation with high-translucency porcelain veneers for a vibrant smile.',
+    imageBefore: '/0d34a50e0ff9247f75e38d0e882c8b2e.jpg',
+    imageAfter: '/0d34a50e0ff9247f75e38d0e882c8b2e.jpg',
+    isComposite: true
   },
 ];
 
@@ -126,12 +129,20 @@ export default function VideoTestimonials() {
                  >
                     {/* Before/After Split */}
                     <div className="flex h-[180px] sm:h-[220px] w-full relative shrink-0">
-                       <div className="w-1/2 h-full relative border-r border-white/50">
-                          <img src={story.imageBefore} alt="Before" className="w-full h-full object-cover" />
+                       <div className="w-1/2 h-full relative border-r border-white/50 overflow-hidden">
+                          <img 
+                            src={story.imageBefore} 
+                            alt="Before" 
+                            className={`w-full h-full object-cover ${story.isComposite ? 'object-left' : ''}`} 
+                          />
                           <div className="absolute top-2 left-2 bg-black/60 backdrop-blur-sm text-white text-[9px] pt-0.5 pb-0.5 px-2 font-medium tracking-wider uppercase rounded-sm">Before</div>
                        </div>
-                       <div className="w-1/2 h-full relative">
-                          <img src={story.imageAfter} alt="After" className="w-full h-full object-cover" />
+                       <div className="w-1/2 h-full relative overflow-hidden">
+                          <img 
+                            src={story.imageAfter} 
+                            alt="After" 
+                            className={`w-full h-full object-cover ${story.isComposite ? 'object-right' : ''}`} 
+                          />
                           <div className="absolute top-2 right-2 bg-secondary/80 backdrop-blur-sm text-white text-[9px] pt-0.5 pb-0.5 px-2 font-medium tracking-wider uppercase rounded-sm">After</div>
                        </div>
                     </div>

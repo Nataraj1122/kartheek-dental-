@@ -8,14 +8,70 @@ const serviceDetails: Record<string, any> = {
     description: 'Permanent, natural-looking replacements for missing teeth using medical-grade titanium posts.',
     benefits: ['Looks and functions like natural teeth', 'Prevents bone loss', 'Durable and long-lasting', 'Restores bite force'],
     overview: 'Dental implants are the standard of care for missing teeth. They are surgically placed into the jawbone, acting as artificial roots to support crowns, bridges, or dentures. Unlike traditional options, they do not require altering adjacent healthy teeth and provide a permanent foundation.',
-    image: 'https://images.unsplash.com/photo-1598256989467-34c81a293f9c?q=80&w=2070&auto=format&fit=crop'
+    image: '/949abfb7-fa3b-40e1-a5a9-4aec1922dbfd.png'
   },
   'root-canal': {
     title: 'Root Canal Treatment',
     description: 'Painless, single-visit endodontic therapy using the latest rotary files and apex locators.',
     benefits: ['Saves the natural tooth', 'Relieves severe toothache', 'Prevents spread of infection', 'Highly successful procedure'],
     overview: 'When the innermost part of the tooth (the pulp) becomes infected, a root canal is necessary to save the tooth. We utilize modern anesthesia and motorized equipment to ensure the procedure is virtually painless and highly efficient, often completed in a single visit.',
-    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2000&auto=format&fit=crop'
+    image: '/569d2b1ef48469774cad871718731b05.jpg'
+  },
+  'smile-designing': {
+    title: 'Smile Designing',
+    description: 'Bespoke cosmetic transformations tailored to your unique facial features.',
+    benefits: ['Perfect facial symmetry', 'Stain resistant results', 'Natural looking aesthetics', 'Minimal prep options'],
+    overview: 'Smile designing involves a series of cosmetic procedures meant to improve your smile. We analyze your facial features and dental structure to create a custom plan that might include veneers, teeth whitening, and contouring for that perfect look.',
+    image: '/887d3589-8791-454a-8775-7513e4f87883.png'
+  },
+  'teeth-whitening': {
+    title: 'Teeth Whitening',
+    description: 'Advanced professional whitening for a radiant, Hollywood smile in just one hour.',
+    benefits: ['Up to 8 shades lighter', 'Safe for enamel', 'Long lasting results', 'Professional supervision'],
+    overview: 'Our professional-grade whitening system uses advanced laser technology to remove deep-seated stains that store-bought products simply can\'t reach. It\'s fast, effective, and performed under expert supervision for the safest results.',
+    image: '/7f8ea0a58821aba25f76043998a7cf7b.jpg'
+  },
+  'pediatric-dentistry': {
+    title: 'Pediatric Dentistry',
+    description: 'Specialized dental care for kids in a fun, fear-free environment.',
+    benefits: ['Child friendly approach', 'Preventive care focus', 'Habit building', 'Painless techniques'],
+    overview: 'We believe that early dental experiences shape a child\'s lifelong attitude towards oral health. Our clinic is designed to be welcoming and fun for children, offering everything from preventive sealants to gentle cavity treatments.',
+    image: '/20fc79b8984f8bc86b1eaf7bd66f431c.jpg'
+  },
+  'full-mouth-rehab': {
+    title: 'Full Mouth Rehab',
+    description: 'Complete restorative transformation for total oral health and function.',
+    benefits: ['Full bite restoration', 'Enhanced facial profile', 'Pain-free chewing', 'Long term health'],
+    overview: 'Full mouth rehabilitation is a comprehensive treatment for those with multiple missing, worn, or damaged teeth. We combine various disciplines like implants, crowns, and periodontics to rebuild your smile from the ground up.',
+    image: '/7ff76640c8d19f235078c8fb63020990.jpg'
+  },
+  'orthodontics': {
+    title: 'Orthodontics & Braces',
+    description: 'Advanced alignment solutions for a perfectly straight and healthy smile.',
+    benefits: ['Improved facial aesthetics', 'Better bite function', 'Options for invisible braces', 'Easier oral hygiene'],
+    overview: 'Orthodontic treatment corrects teeth that are crowded, crooked, or misaligned. We offer a variety of options including high-quality metallic braces, aesthetic ceramic braces, and modern clear aligners tailored to your lifestyle and needs.',
+    image: '/690520eac20a2b372e3cfac08f6eb156.jpg'
+  },
+  'maxillofacial-surgery': {
+    title: 'Maxillofacial Surgery',
+    description: 'Specialized surgical care for the face, jaws, and mouth.',
+    benefits: ['Corrective jaw surgery', 'Treatment for facial trauma', 'Removal of cysts and tumors', 'Expert specialist care'],
+    overview: 'Maxillofacial surgery addresses complex conditions of the face and jaw. Our surgeons are experts in corrective jaw surgery, facial trauma reconstruction, and management of various oral pathologies, ensuring the highest standards of safety and care.',
+    image: '/19e7ebe98109338faf0d9bbde6840b78.jpg'
+  },
+  'crowns-bridges': {
+    title: 'Crowns & Bridges',
+    description: 'Bespoke restorations to restore strength and aesthetics to your teeth.',
+    benefits: ['Natural looks', 'Restores bite strength', 'Durable Zirconia', 'Seamless fit'],
+    overview: 'Crowns and bridges are permanent prosthetic devices. A crown is used to entirely cover a damaged tooth, while a bridge replaces one or more missing teeth by spanning the space where the teeth are missing, anchored to natural teeth or implants.',
+    image: '/84bcc53e1d13727579ef37e8c88e25d4.jpg'
+  },
+  'wisdom-extraction': {
+    title: 'Wisdom Tooth Extraction',
+    description: 'Expert surgical removal of problematic wisdom teeth.',
+    benefits: ['Pain relief', 'Prevents infection', 'Protects other teeth', 'Swift recovery'],
+    overview: 'Wisdom teeth often don\'t have enough room to emerge or grow normally. When they become impacted or cause pain, surgical extraction is necessary. Our specialists ensure a comfortable, painless procedure with advanced post-operative care for quick healing.',
+    image: '/09df071c08c3235712cd33bc08c61a2b.jpg'
   }
 };
 

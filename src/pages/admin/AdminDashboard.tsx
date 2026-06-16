@@ -1,24 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Users, Calendar, MessageSquare, LayoutDashboard, 
   Settings, LogOut, Search, Bell, Menu, X, ArrowUpRight, CheckCircle2, Clock
 } from 'lucide-react';
+import { socket } from '../../lib/socket';
+
+type Appointment = {
+  id: string;
+  patientName: string;
+  time: string;
+  type: string;
+  status: string;
+  phone?: string;
+};
 
 export default function AdminDashboard() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  const [appointments, setAppointments] = useState<Appointment[]>([]);
 
-  // Mock data for the dashboard
+  useEffect(() => {
+    // Listen for initial appointments on connect
+    socket.on('initial_appointments', (data: Appointment[]) => {
+      setAppointments(data);
+    });
+
+    // Listen for new booking events
+    socket.on('new_appointment', (newApt: Appointment) => {
+      setAppointments((prev) => [newApt, ...prev]);
+      
+      // Optionally notify via web Audio or alert
+      console.log('New real-time appointment received:', newApt);
+    });
+
+    // Cleanup listeners
+    return () => {
+      socket.off('initial_appointments');
+      socket.off('new_appointment');
+    };
+  }, []);
+
+  // Mock data for the dashboard stats
   const stats = [
-    { title: 'Total Appointments', value: '1,248', change: '+12%', icon: <Calendar size={24} /> },
+    { title: 'Total Appointments', value: appointments.length.toString(), change: '+12%', icon: <Calendar size={24} /> },
     { title: 'Active Patients', value: '840', change: '+5%', icon: <Users size={24} /> },
     { title: 'New Messages', value: '32', change: '+18%', icon: <MessageSquare size={24} /> },
-  ];
-
-  const recentAppointments = [
-    { id: '1', patientName: 'Rahul Kumar', time: '10:00 AM, Today', type: 'Root Canal', status: 'Completed' },
-    { id: '2', patientName: 'Priya Sharma', time: '11:30 AM, Today', type: 'Consultation', status: 'Waiting' },
-    { id: '3', patientName: 'Anil Reddy', time: '02:00 PM, Today', type: 'Dental Implant', status: 'Scheduled' },
-    { id: '4', patientName: 'Sneha Patel', time: '04:15 PM, Today', type: 'Follow-up', status: 'Scheduled' },
   ];
 
   return (
@@ -153,10 +178,11 @@ export default function AdminDashboard() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100">
-                  {recentAppointments.map((apt) => (
+                  {appointments.map((apt) => (
                     <tr key={apt.id} className="hover:bg-slate-50 transition-colors">
                       <td className="px-6 py-4">
                         <div className="font-medium text-slate-900 text-sm">{apt.patientName}</div>
+                        {apt.phone && <div className="text-xs text-slate-500 mt-0.5">{apt.phone}</div>}
                       </td>
                       <td className="px-6 py-4">
                         <div className="flex items-center gap-1.5 text-sm text-slate-600">
@@ -187,7 +213,7 @@ export default function AdminDashboard() {
               </table>
             </div>
             
-            {recentAppointments.length === 0 && (
+            {appointments.length === 0 && (
               <div className="py-12 text-center">
                 <p className="text-slate-500 text-sm">No more appointments today.</p>
               </div>

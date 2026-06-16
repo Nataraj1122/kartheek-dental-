@@ -41,7 +41,7 @@ export default function ImplantsShowcase() {
              <div className="relative aspect-square md:aspect-[4/5] w-full max-w-sm md:max-w-md mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-tr from-secondary/40 to-transparent rounded-[2rem] md:rounded-[3rem] blur-xl opacity-50"></div>
                 <div className="glass-panel-dark w-full h-full rounded-[2rem] md:rounded-[3rem] border border-white/20 p-6 md:p-8 flex flex-col justify-end relative z-10 overflow-hidden shadow-[0_0_50px_rgba(0,180,216,0.15)]">
-                   <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2000&auto=format&fit=crop" className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay" alt="Tech" />
+                   <img src="/949abfb7-fa3b-40e1-a5a9-4aec1922dbfd.png" className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-overlay" alt="Tech" />
                    <div className="relative z-20">
                      <div className="inline-block px-3 py-1 md:px-4 md:py-1.5 rounded-full border border-secondary/50 text-secondary text-xs md:text-sm font-medium mb-3 md:mb-4 backdrop-blur-md bg-secondary/10">3D Precision Mapping</div>
                      <div className="text-2xl md:text-3xl font-light text-white leading-tight">Guided Implant Surgery for maximum safety.</div>

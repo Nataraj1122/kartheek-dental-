@@ -1,6 +1,7 @@
 import { MessageSquare, Phone, Sparkles, X, Send, ChevronDown, Clock, User, Calendar } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useState, useRef, useEffect } from 'react';
+import { socket } from '../lib/socket';
 
 type Message = {
   id: string;
@@ -37,6 +38,7 @@ export default function Chatbot() {
     }
   ]);
   const [inputValue, setInputValue] = useState("");
+  const [bookingMode, setBookingMode] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -50,7 +52,6 @@ export default function Chatbot() {
   }, [messages, isOpen]);
 
   const handleActionClick = (action: string) => {
-    // Add user message
     const newMessages = [...messages.filter(m => !m.isQuickActions), {
       id: Date.now().toString(),
       type: 'user' as const,
@@ -58,7 +59,6 @@ export default function Chatbot() {
     }];
     setMessages(newMessages);
 
-    // Simulate bot response
     setTimeout(() => {
       let botResponse = "I can definitely help you with that.";
       
@@ -75,7 +75,8 @@ export default function Chatbot() {
           botResponse = "I'm connecting you to the doctor's line.";
           break;
         case "Book Appointment":
-          botResponse = "Excellent! Please provide your name and phone number below, or you can call us directly on WhatsApp to confirm your slot.";
+          botResponse = "Excellent! Please reply with your Name and Phone Number to confirm your slot.";
+          setBookingMode(true);
           break;
         case "Dental Implants":
           botResponse = "Dental implants are artificial tooth roots placed into the jaw to hold a replacement tooth. They look and function like natural teeth. Would you like to schedule a consultation?";
@@ -119,12 +120,25 @@ export default function Chatbot() {
     setMessages(newMessages);
 
     setTimeout(() => {
+      let responseText = "Thank you for sharing! One of our specialists will get back to you shortly. You can also reach us immediately at +91 90523 11281.";
+      
+      if (bookingMode) {
+        // Simple extraction: assume whatever they typed is their "name and phone"
+        socket.emit("book_appointment", {
+          name: userText,
+          phone: userText, // Full string sent for demo
+          type: "Consultation booked via AI"
+        });
+        responseText = "Thank you! I've placed your appointment request into our real-time system. Our staff will see it immediately and confirm shortly.";
+        setBookingMode(false);
+      }
+
       setMessages(prev => [
         ...prev,
         {
           id: (Date.now() + 1).toString(),
           type: 'bot',
-          text: "Thank you for sharing! One of our specialists will get back to you shortly. You can also reach us immediately at +91 90523 11281."
+          text: responseText
         },
         {
           id: (Date.now() + 2).toString(),
@@ -152,7 +166,7 @@ export default function Chatbot() {
               <div className="flex items-center gap-3">
                 <div className="relative">
                   <div className="w-10 h-10 rounded-full overflow-hidden bg-white/20 p-0.5">
-                    <img src="https://images.unsplash.com/photo-1612349317150-e410f624c427?q=80&w=200&auto=format&fit=crop" alt="Dr Profil" className="w-full h-full rounded-full object-cover" />
+                    <img src="/Screenshot 2026-06-16 142755.png" alt="Dr Profil" className="w-full h-full rounded-full object-cover" />
                   </div>
                   <div className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full border-2 border-primary"></div>
                 </div>
@@ -237,7 +251,7 @@ export default function Chatbot() {
             >
               <div className="absolute inset-0 bg-primary rounded-full animate-pulse opacity-20"></div>
               <div className="absolute inset-0 bg-primary rounded-full overflow-hidden border-2 border-white">
-                <img src="https://images.unsplash.com/photo-1612349317150-e410f624c427?q=80&w=200&auto=format&fit=crop" alt="Dr Profil" className="w-full h-full rounded-full object-cover" />
+                <img src="/Screenshot 2026-06-16 142755.png" alt="Dr Profil" className="w-full h-full rounded-full object-cover" />
               </div>
               <div className="absolute -top-1 -right-1 bg-green-500 w-4 h-4 rounded-full border-2 border-white shadow-sm z-10 animate-pulse"></div>
               

@@ -8,7 +8,7 @@ const services = [
     title: 'Dental Implants',
     shortDesc: 'Permanent, medical-grade replacements for missing teeth.',
     description: 'Dental implants are the most natural looking and feeling replacement for missing teeth. We use premium titanium implants that integrate with your jawbone to provide a permanent, unmovable foundation for crowns, bridges, or dentures.',
-    image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop',
+    image: '/949abfb7-fa3b-40e1-a5a9-4aec1922dbfd.png',
     benefits: ['Looks and feels like natural teeth', 'Prevents bone loss in the jaw', 'Lasts a lifetime with proper care', 'No restriction on eating'],
     procedure: 'The procedure is completely pain-free under local anesthesia. The titanium implant is precisely placed into the jawbone. After a healing period of a few months where the bone fuses with the implant, a custom-made crown is perfectly fitted on top.',
     faq: [
@@ -21,7 +21,7 @@ const services = [
     title: 'Root Canal Treatment',
     shortDesc: 'Painless, single-visit rotary endodontics to save natural teeth.',
     description: 'We perform advanced rotary root canal treatments to relieve dental pain and save your natural tooth. Using modern anesthetics and precision equipment, we remove the infected pulp and seal the tooth in a single, comfortable visit.',
-    image: 'https://images.unsplash.com/photo-1612349317150-e410f624c427?q=80&w=800&auto=format&fit=crop',
+    image: '/569d2b1ef48469774cad871718731b05.jpg',
     benefits: ['Immediate pain relief', 'Saves your natural tooth structure', 'Painless single-visit procedure', 'Prevents spread of infection'],
     procedure: 'After numbing the area, a small opening is made to access the infected pulp. The pulp is carefully removed using rotary files, and the canals are cleaned, disinfected, and sealed. A crown is later placed to restore full strength.',
     faq: [
@@ -34,7 +34,7 @@ const services = [
     title: 'Smile Designing',
     shortDesc: 'Custom cosmetic makeovers for a flawless aesthetic smile.',
     description: 'Smile designing is a bespoke cosmetic procedure tailored to your facial symmetry. We combine veneers, laminates, and teeth whitening to correct chips, gaps, and stains to give you a perfect, confident smile.',
-    image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop',
+    image: '/887d3589-8791-454a-8775-7513e4f87883.png',
     benefits: ['Boosts self-confidence instantly', 'Custom-designed for your face', 'Stain-resistant materials', 'Completely natural appearance'],
     procedure: 'We start with a digital smile scan to plan your new look. Depending on your needs, ultra-thin porcelain veneers are custom-crafted and bonded to the front of your teeth, reshaping your entire smile.',
     faq: [
@@ -47,7 +47,7 @@ const services = [
     title: 'Full Mouth Rehab',
     shortDesc: 'Complete restoration of dental health, function, and aesthetics.',
     description: 'For patients with severe dental issues, multiple missing teeth, or worn-down bites, full mouth rehabilitation restores optimal function and appearance. The treatment may combine implants, crowns, and orthodontics to rebuild your mouth comprehensively.',
-    image: 'https://images.unsplash.com/photo-1598256989467-34c81a293f9c?q=80&w=800&auto=format&fit=crop',
+    image: '/7ff76640c8d19f235078c8fb63020990.jpg',
     benefits: ['Restores full chewing capability', 'Eliminates chronic jaw pain', 'Rebuilds facial structure', 'Comprehensive oral health revival'],
     procedure: 'A comprehensive, phased treatment plan is created. It may involve periodontal therapy to ensure healthy gums, followed by the placement of implants or bridges, and finally, crowns to restore the bite alignment.',
     faq: [
@@ -60,7 +60,7 @@ const services = [
     title: 'Teeth Whitening',
     shortDesc: 'Professional laser whitening for a bright, radiant smile.',
     description: 'Erase years of stains from coffee, tea, and tobacco with professional laser teeth whitening. Our advanced bleaching technology lightens teeth by several shades in just under an hour, safely and securely.',
-    image: 'https://images.unsplash.com/photo-1554734867-bf3c00a49371?q=80&w=800&auto=format&fit=crop',
+    image: '/7f8ea0a58821aba25f76043998a7cf7b.jpg',
     benefits: ['Immediate, visible results in 1 hour', 'Safe for tooth enamel', 'Removes deep intrinsic stains', 'Enhances overall facial youthfulness'],
     procedure: 'A protective gel is applied to the gums, followed by a professional-grade whitening agent on the teeth. A specialized laser or LED light is used to activate the gel, rapidly breaking down deeply embedded stains.',
     faq: [
@@ -73,7 +73,7 @@ const services = [
     title: 'Pediatric Dentistry',
     shortDesc: 'Gentle, friendly dental care specially designed for children.',
     description: 'We provide specialized dental care for infants, children, and teenagers in a fun, fear-free environment. From preventive fluoride treatments to advanced cavity care, we ensure your child grows up with a healthy smile.',
-    image: 'https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?q=80&w=800&auto=format&fit=crop',
+    image: '/20fc79b8984f8bc86b1eaf7bd66f431c.jpg',
     benefits: ['Fear-free, child-friendly environment', 'Focus on preventive care', 'Helps build lifelong healthy habits', 'Painless gentle treatments'],
     procedure: 'Our pediatric sessions focus on making the child comfortable first. We offer preventive sealants, fluoride varnishes, and gentle restorations. We use "tell-show-do" techniques to keep kids relaxed.',
     faq: [
@@ -86,7 +86,7 @@ const services = [
     title: 'Crowns & Bridges',
     shortDesc: 'Premium restorative solutions to fix damaged or missing teeth.',
     description: 'Restore damaged teeth or bridge the gap of missing ones with our high-strength Zirconia and E-max crowns. They are digitally designed to match the exact shade and shape of your natural teeth for a seamless fit.',
-    image: 'https://images.unsplash.com/photo-1598256989417-640a359d9972?q=80&w=800&auto=format&fit=crop',
+    image: '/84bcc53e1d13727579ef37e8c88e25d4.jpg',
     benefits: ['Restores tooth strength flawlessly', 'Highly aesthetic metal-free options', 'Prevents shifting of adjacent teeth', 'Durable and long-lasting'],
     procedure: 'The damaged tooth is reshaped, and a digital impression is taken. A custom crown is milled and permanently cemented onto the tooth. For a bridge, the adjacent teeth are prepared to anchor the replacement tooth.',
     faq: [
@@ -99,7 +99,7 @@ const services = [
     title: 'Wisdom Tooth Extraction',
     shortDesc: 'Painless surgical removal of impacted wisdom teeth.',
     description: 'Impacted or infected wisdom teeth can cause severe pain and shifting of your bite. Our maxillofacial specialists perform safe, swift, and painless extractions to prevent further oral health complications.',
-    image: 'https://images.unsplash.com/photo-1579684453423-f84349ef60b0?q=80&w=800&auto=format&fit=crop',
+    image: '/09df071c08c3235712cd33bc08c61a2b.jpg',
     benefits: ['Prevents crowding of other teeth', 'Eliminates acute pain and infection', 'Performed by surgical specialists', 'Fast healing protocols'],
     procedure: 'The tooth and surrounding area are completely numbed. Depending on the impaction, a small incision may be made to extract the tooth gently. Sutures are sometimes placed to aid in rapid healing.',
     faq: [
@@ -112,7 +112,7 @@ const services = [
     title: 'Orthodontic Braces',
     shortDesc: 'Straighten misaligned teeth with modern braces & aligners.',
     description: 'Achieve a perfectly aligned smile with our modern orthodontic treatments. We offer traditional metal braces, aesthetic ceramic braces, and invisible clear aligners to correct crowding and spacing issues.',
-    image: 'https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=800&auto=format&fit=crop',
+    image: '/690520eac20a2b372e3cfac08f6eb156.jpg',
     benefits: ['Improves facial profile and smile', 'Makes teeth easier to clean', 'Corrects bite issues (underbite/overbite)', 'Options for invisible treatment'],
     procedure: 'After a comprehensive scan, brackets are bonded to your teeth and connected with a wire, which gently guides teeth into position over time. For clear aligners, you wear a series of custom trays that gradually shift your teeth.',
     faq: [
@@ -125,7 +125,7 @@ const services = [
     title: 'Maxillofacial Surgery',
     shortDesc: 'Advanced surgical care for facial trauma, cysts, and jaw issues.',
     description: 'We provide specialized surgical interventions for complex conditions involving the jaw, face, and mouth. Our procedures range from treating facial trauma and jaw cysts to corrective jaw surgery for bite discrepancies.',
-    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop',
+    image: '/19e7ebe98109338faf0d9bbde6840b78.jpg',
     benefits: ['Specialist-level surgical care', 'Corrects severe functional issues', 'Advanced pain management', 'Safe, hospital-grade protocols'],
     procedure: 'Procedures are meticulously planned using 3D CBCT scans. Surgeries are performed under local or general anesthesia depending on the complexity, ensuring complete patient safety and comfort throughout.',
     faq: [

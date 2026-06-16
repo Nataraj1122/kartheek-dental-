@@ -16,7 +16,7 @@ export default function AboutClinic() {
                transition={{ duration: 1 }}
                className="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl relative z-10"
              >
-                <img src="https://images.unsplash.com/photo-1598256989467-34c81a293f9c?q=80&w=2070&auto=format&fit=crop" className="w-full h-full object-cover" alt="Clinic Interior" />
+                <img src="/baaea448db9ac25b1c5b4aaa24c57c48.jpg" className="w-full h-full object-cover" alt="Clinic Interior" />
              </motion.div>
              <motion.div 
                 initial={{ opacity: 0, x: 50, y: 50 }}
